@@ -2,8 +2,63 @@
   <h2 class="container-block-title">About Me</h2>
   <p>
     Hi! I'm Serenity Hall, a 5th-year student at Michigan State University studying Data Science.  
-    I love traveling and discovering new places — one of my biggest dreams is to visit Greece someday.  
-    I used to live in Los Angeles, and during that time, I developed a deep love for nature and animals.  
+    I love traveling and discovering new places — one of my biggest dreams is to visit Greece someday.    
     Outside of academics, I enjoy quiet moments spent in nature, learning new things, and connecting with others through shared experiences.
   </p>
 </div>
+<!-- Tabs Section -->
+<div style="margin-top: 2rem; font-family: 'Georgia', serif;">
+
+  <!-- Tab buttons -->
+  <div style="display: flex; border-bottom: 2px solid #ccc;">
+    <button onclick="showTab('projects')" id="projects-tab"
+      style="background:none;border:none;padding:10px 20px;font-weight:bold;cursor:pointer;border-bottom:2px solid #007acc;color:#007acc;">
+      Projects
+    </button>
+    <button onclick="showTab('skills')" id="skills-tab"
+      style="background:none;border:none;padding:10px 20px;font-weight:bold;cursor:pointer;">
+      Skills & Proficiency
+    </button>
+  </div>
+
+  <!-- Projects Content -->
+  <div id="projects-content" style="display:block; padding: 1rem 0;">
+    <h2>Projects</h2>
+    <p>Below are a few projects and initiatives I have contributed to through research, leadership roles, or coursework.</p>
+    <ul>
+      <li><strong>Black Book Resource Update</strong> – Researched and updated a campus resource hub to improve cultural belonging for Black students.</li>
+      <li><strong>Strategic Communications Coordinator</strong> – Designed promotional materials and helped coordinate student engagement events.</li>
+    </ul>
+  </div>
+
+  <!-- Skills Content -->
+  <div id="skills-content" style="display:none; padding: 1rem 0;">
+    <h2>Skills & Proficiency</h2>
+    <ul>
+      <li>Customer Service & Communication</li>
+      <li>Problem-Solving & Supervision</li>
+      <li>Teamwork & Leadership</li>
+      <li>Python (basic)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Tab Switcher Script -->
+<script>
+  function showTab(tab) {
+    // Hide both contents
+    document.getElementById('projects-content').style.display = 'none';
+    document.getElementById('skills-content').style.display = 'none';
+
+    // Remove active styling from both tabs
+    document.getElementById('projects-tab').style.borderBottom = '2px solid transparent';
+    document.getElementById('projects-tab').style.color = 'black';
+    document.getElementById('skills-tab').style.borderBottom = '2px solid transparent';
+    document.getElementById('skills-tab').style.color = 'black';
+
+    // Show the selected content and update tab style
+    document.getElementById(tab + '-content').style.display = 'block';
+    document.getElementById(tab + '-tab').style.borderBottom = '2px solid #007acc';
+    document.getElementById(tab + '-tab').style.color = '#007acc';
+  }
+</script>
